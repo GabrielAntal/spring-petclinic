@@ -61,10 +61,9 @@ public class Owner extends Person {
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
 	private Set<Pet> pets;
-        
-        @Column (name= "ativo")
-        private boolean ativo;
-        
+
+	private boolean ativo;
+
 	public String getAddress() {
 		return this.address;
 	}
@@ -99,8 +98,8 @@ public class Owner extends Person {
 	protected void setPetsInternal(Set<Pet> pets) {
 		this.pets = pets;
 	}
-        
-        public boolean getAtivo() {
+
+	public boolean getAtivo() {
 		return this.ativo;
 	}
 
@@ -155,7 +154,7 @@ public class Owner extends Person {
 
 				.append("id", this.getId()).append("new", this.isNew()).append("lastName", this.getLastName())
 				.append("firstName", this.getFirstName()).append("address", this.address).append("city", this.city)
-				.append("telephone", this.telephone).append("ativo",this.ativo).toString();
+				.append("telephone", this.telephone).append("ativo", this.ativo).toString();
 	}
 
 }
