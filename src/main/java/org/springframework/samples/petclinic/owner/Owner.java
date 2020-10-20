@@ -61,7 +61,8 @@ public class Owner extends Person {
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
 	private Set<Pet> pets;
-
+        
+        @Column (name= "ativo")
 	private boolean ativo;
 
 	public String getAddress() {
